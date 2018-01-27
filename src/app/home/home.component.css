@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
+.snip1236 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  color: #e2f81d;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+  border-top: 3px solid #bdbdbd;
+  padding-top: 6px;
+  background-color: #999999
+}
+.snip1236 * {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+}
+.snip1236 h1,
+.snip1236 h5 {
+  margin: 0;
+  line-height: 1em;
+}
+.snip1236 h1 {
+  font-family: 'Playfair Display', Arial, sans-serif;
+  font-size: 2.8em;
+}
+.snip1236 h5 {
+  line-height: 0.5em;
+  font-weight: 400;
+  display: table;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  padding: 0 10px;
+}
+.snip1236 h5:before,
+.snip1236 h5:after {
+  position: absolute;
+  height: 3px;
+  content: '';
+  background: #bdbdbd;
+  width: 1000%;
+  top: 50%;
+}
+.snip1236 h5:before {
+  left: -1000%;
+}
+.snip1236 h5:after {
+  right: -1000%;
+}
+
+.logo img {
+    align-content: center
+}
+
+/* Demo purposes only */
+html {
+    background-color: #999999;
+ }
+ 
+ body {
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 0px;
+    padding-top: 100px;
+    color: #e2f81d;
+    background-color: #999999;
+    text-align: center
+ }
