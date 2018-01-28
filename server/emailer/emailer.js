@@ -1,13 +1,13 @@
 var nodemailer = require('nodemailer');
-var config = require("./../../config/secrets");
+//var config = require("./../../config/secrets");
 
 console.log('Running emailer svc');
 
 var transporter = nodemailer.createTransport({
     service: 'SendGrid',
     auth: {
-      user: config.sendGridUser,
-      pass: config.sendGridPassword
+      user: 'config.sendGridUser',
+      pass: 'config.sendGridPassword'
     },
     tls: { rejectUnauthorized: false }
   });
@@ -15,8 +15,8 @@ var transporter = nodemailer.createTransport({
   console.log('Created transport');
   
   var dummyMailOptions = {
-    from: config.gmailUser,
-    to: config.yahooUser,
+    from: 'config.gmailUser',
+    to: 'config.yahooUser',
     subject: 'Sending Email using Node.js',
     text: 'That was easy!'
   };
