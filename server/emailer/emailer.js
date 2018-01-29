@@ -42,6 +42,8 @@ var transporter = nodemailer.createTransport({
       text: `Details: First Name: ${emailRequest.firstName}, Last Name: ${emailRequest.lastName}`
     };
 
+    console.log('From :', mailOptions.from);
+    console.log('To :', mailOptions.to);
     console.log('Sending email with text : ', mailOptions.text);
 
     transporter.sendMail(mailOptions, function(error, info){
