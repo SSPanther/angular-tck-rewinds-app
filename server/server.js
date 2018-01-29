@@ -30,11 +30,15 @@ app.post('/email', (req, res) => {
 
     //console.log('Setup email request');
 
-    emailer.sendMail(emailRequest);
+    emailer.sendMail(emailRequest).then((res) => {
+        res.send(res);
+    }).catch((e) => res.status(400).send(e));
 
+    /*
     res.send({
         msg: "Email request sent"
     });
+    */
 
     /*
     todo.save().then((doc) => {

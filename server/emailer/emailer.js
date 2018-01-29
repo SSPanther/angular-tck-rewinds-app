@@ -33,6 +33,7 @@ var transporter = nodemailer.createTransport({
       });
   };
 */
+/*
   var sendMail = function (emailRequest) {
 
     var mailOptions = {
@@ -53,6 +54,32 @@ var transporter = nodemailer.createTransport({
           console.log('Email sent: ' + info.response);
         }
       });
+  };
+*/
+  var sendMail = (emailRequest) => {
+
+    return new Promise((resolve, reject) => {
+      var mailOptions = {
+        from: process.env.tck_gmailUser,
+        to: process.env.tck_yahooUser,
+        subject: 'Email request from TCK Website',
+        text: `Details: First Name: ${emailRequest.firstName}, Last Name: ${emailRequest.lastName}`
+      };
+  
+      console.log('From :', mailOptions.from);
+      console.log('To :', mailOptions.to);
+      console.log('Sending email with text : ', mailOptions.text);
+  
+      transporter.sendMail(mailOptions, function(error, info){
+          if (error) {
+            console.log(error);
+            reject(error);
+          } else {
+            console.log('Email sent: ' + info.response);
+            resolve(info.response);
+          }
+        });
+    });
   };
   
   //sendMail(dummyMailOptions);
