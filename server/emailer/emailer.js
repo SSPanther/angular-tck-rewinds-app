@@ -75,8 +75,10 @@ var transporter = nodemailer.createTransport({
             console.log(error);
             reject(error);
           } else {
-            console.log('Email sent: ' + info.response);
-            resolve(info.response);
+            console.log('Transporter response: ' + info.response);
+            resolve({
+              response: info.response
+            });
           }
         });
     });
