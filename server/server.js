@@ -30,8 +30,8 @@ app.post('/email', (req, res) => {
 
     //console.log('Setup email request');
 
-    emailer.sendMail(emailRequest).then((res) => {
-        res.send(res);
+    emailer.sendMail(emailRequest).then((doc) => {
+        res.send(doc);
     }).catch((e) => res.status(400).send(e));
 
     /*

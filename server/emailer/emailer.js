@@ -70,6 +70,13 @@ var transporter = nodemailer.createTransport({
       console.log('To :', mailOptions.to);
       console.log('Sending email with text : ', mailOptions.text);
   
+      /*
+      console.log('Transporter response: ' + '250 Ok: queued as HMeJnE-mQyGOVXxU9L36DQ');
+      resolve({
+        response: '250 Ok: queued as HMeJnE-mQyGOVXxU9L36DQ'
+      });
+      */
+      
       transporter.sendMail(mailOptions, function(error, info){
           if (error) {
             console.log(error);
@@ -81,6 +88,7 @@ var transporter = nodemailer.createTransport({
             });
           }
         });
+      
     });
   };
   
