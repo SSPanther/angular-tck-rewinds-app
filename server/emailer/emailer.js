@@ -37,7 +37,7 @@ var transporter = nodemailer.createTransport({
 
     var mailOptions = {
       from: process.env.tck_gmailUser,
-      to: process.env.tck_YahooUser,
+      to: process.env.tck_yahooUser,
       subject: 'Email request from TCK Website',
       text: `Details: First Name: ${emailRequest.firstName}, Last Name: ${emailRequest.lastName}`
     };
